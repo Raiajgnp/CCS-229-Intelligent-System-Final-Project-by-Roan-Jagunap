@@ -38,7 +38,7 @@ if "chat_session" not in st.session_state:
 
 
 # Display the chatbot's title on the page
-st.title("🤖 Create Content with Generative AI by: Roan Jagunap")
+st.title("🤖 Create Content with Generative AI by: Roan Jagunap (Topic focuses on Intelligent Systems and Computer Science)")
 
 # Display the chat history
 for message in st.session_state.chat_session.history:
