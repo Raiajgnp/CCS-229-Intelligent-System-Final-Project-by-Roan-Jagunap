@@ -65,11 +65,11 @@ st.subheader("Can you share what your life has been recently?")
 user_life = st.text_area("Recently, my life has been...")
 
 # Ask user about the main problem they encounter lately
-st.subheader("What is the main problem you encounter lately?")
-user_problem = st.text_area("The main problem I'm facing is...")
+st.subheader("Tell us your worst experience you had leading to mental breakdown.")
+user_problem = st.text_area("The worst experience I had is when...")
 
 # Collect responses and provide feedback
-if st.button("Submit"):
+if st.button("Generate"):
     # Display user's responses
     st.write("### Your Responses")
     st.write(f"**Feeling:** {user_feeling}")
