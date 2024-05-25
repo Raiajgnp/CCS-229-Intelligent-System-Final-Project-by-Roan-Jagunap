@@ -33,7 +33,7 @@ if "chat_session" not in st.session_state:
     st.session_state.chat_session = model.start_chat(history=[])
 
 # Display the chatbot's title on the page
-st.title("🤖 Create Content with Generative AI by: Roan Jagunap")
+st.title("💬 Create Content with Generative AI by: Roan Jagunap")
 
 # Display the chat history
 for message in st.session_state.chat_session.history:
@@ -41,7 +41,7 @@ for message in st.session_state.chat_session.history:
         st.markdown(message.parts[0].text)
 
 # Input field for user's message
-user_prompt = st.chat_input("Ask Gen AI...")
+user_prompt = st.chat_input("📝 If you want to elaborate what you feel, this is a safe space to overshare.")
 if user_prompt:
     # Add user's message to chat and display it
     st.chat_message("user").markdown(user_prompt)
@@ -54,18 +54,18 @@ if user_prompt:
         st.markdown(gemini_response.text)
 
 # Mental Health Support Section
-st.header("Let's check your mental sanity, shall we?")
+st.header("Let's check your mental sanity, shall we? ✨")
 
 # Ask user about their feelings
-st.subheader("Are you feeling alright?")
+st.subheader("☹ Are you feeling alright? Tell us your genuine emotion.")
 user_feeling = st.text_input("To be honest, I am feeling...")
 
 # Ask user about their life lately
-st.subheader("Can you share what your life has been recently?")
+st.subheader("♡ Can you share what your life has been recently?")
 user_life = st.text_area("Recently, my life has been...")
 
 # Ask user about the main problem they encounter lately
-st.subheader("Tell us your worst experience you had leading to mental breakdown.")
+st.subheader("🗣 Tell us your worst experience you had leading to mental breakdown.")
 user_problem = st.text_area("The worst experience I had is when...")
 
 # Collect responses and provide feedback
@@ -74,13 +74,13 @@ if st.button("Generate"):
     st.write("### Your Responses")
     st.write(f"**Feeling:** {user_feeling}")
     st.write(f"**Life lately:** {user_life}")
-    st.write(f"**Main problem:** {user_problem}")
+    st.write(f"**Worst Experience:** {user_problem}")
 
     # Provide some feedback or response
     feedback_prompt = f"""
     The user is feeling: {user_feeling}.
     Their life lately has been: {user_life}.
-    The main problem they are facing is: {user_problem}.
+    The worst experience they are facing is: {user_problem}.
     """
     feedback_response = st.session_state.chat_session.send_message(feedback_prompt)
 
