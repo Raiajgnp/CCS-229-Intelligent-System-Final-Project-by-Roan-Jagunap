@@ -1,4 +1,4 @@
-# 🤖 Create Content with Generative AI (Topic focuses on Intelligent Systems and Computer Science)
+# 🤖 Create Content with Generative AI
 ### by: Roan H. Jagunap | BSCS 3B - AI | CCS 229 Intelligent Systems Final Project ###
 
 ## 𐙚 Overview
